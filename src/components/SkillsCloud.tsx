@@ -115,8 +115,12 @@ const SkillsCloud = () => {
   }, [isInView]);
 
   return (
-    <section id="skills" className="py-20 bg-secondary/10" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section 
+      id="skills" 
+      className="py-20 bg-secondary/10 flex items-center justify-center min-h-screen" 
+      ref={ref}
+    >
+      <div className="container mx-auto px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -131,7 +135,7 @@ const SkillsCloud = () => {
         </motion.div>
 
         <motion.div 
-          className="relative h-[500px] skill-cloud"
+          className="relative h-[500px] skill-cloud mx-auto"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
