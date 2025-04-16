@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,8 +13,6 @@ export default {
 		fontFamily: {
 			inter: ['Inter', 'sans-serif'],
 		},
-	prefix: "",
-	theme: {
 		container: {
 			center: true,
 			padding: '2rem',
