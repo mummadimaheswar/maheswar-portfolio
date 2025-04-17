@@ -117,7 +117,7 @@ const SkillsCloud = () => {
   return (
     <section 
       id="skills" 
-      className="py-20 bg-secondary/10 flex items-center justify-center min-h-screen" 
+      className="py-10 bg-secondary/10" 
       ref={ref}
     >
       <div className="container mx-auto px-6 w-full">
@@ -125,17 +125,17 @@ const SkillsCloud = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
+          className="mb-8 text-center"
         >
           <h2 className="text-3xl font-bold mb-2">Skills</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             The technical skills that enable me to build innovative AI solutions and intelligent systems.
           </p>
         </motion.div>
 
         <motion.div 
-          className="relative h-[500px] skill-cloud mx-auto"
+          className="relative h-[400px] skill-cloud mx-auto"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
