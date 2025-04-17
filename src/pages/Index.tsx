@@ -10,31 +10,39 @@ import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ParticlesBackground from '../components/ParticlesBackground';
 import ScrollToTop from '../components/ScrollToTop';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Index = () => {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
-    // Set up intersection observer for animation on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '-50px'
-    };
+    // GSAP smooth scrolling
+    const sections = document.querySelectorAll('section[id]');
     
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+    sections.forEach((section) => {
+      const sectionId = section.getAttribute('id') || '';
+      
+      // Set up scroll trigger for each section
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 80%",
+        onEnter: () => {
+          section.classList.add('visible');
         }
       });
-    };
-    
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    document.querySelectorAll('.section-fade').forEach(section => {
-      observer.observe(section);
+      
+      sectionRefs.current[sectionId] = section as HTMLElement;
     });
-    
-    return () => observer.disconnect();
+
+    // Cleanup ScrollTrigger on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
