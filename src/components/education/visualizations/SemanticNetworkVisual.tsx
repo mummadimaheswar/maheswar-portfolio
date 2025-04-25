@@ -9,6 +9,8 @@ interface Node {
   name: string;
   group: number;
   val: number;
+  x?: number;
+  y?: number;
 }
 
 interface Link {
@@ -161,13 +163,15 @@ const SemanticNetworkVisual = () => {
             cooldownTicks={100}
             nodeCanvasObjectMode={() => 'after'}
             nodeCanvasObject={(node, ctx, globalScale) => {
-              const n = node as Node;
+              const n = node as Node & { x?: number; y?: number };
+              if (n.x === undefined || n.y === undefined) return;
+              
               const fontSize = 12 / globalScale;
               ctx.font = `${fontSize}px Inter`;
               ctx.textAlign = 'center';
               ctx.textBaseline = 'middle';
               ctx.fillStyle = 'white';
-              ctx.fillText(n.name, n.x!, n.y! + 10);
+              ctx.fillText(n.name, n.x, n.y + 10);
             }}
           />
         )}
