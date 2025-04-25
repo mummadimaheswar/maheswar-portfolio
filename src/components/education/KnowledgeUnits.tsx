@@ -32,7 +32,7 @@ const units: UnitContent[] = [
       {
         id: 'frames',
         title: 'Frames',
-        simplifiedContent: 'Frames are like fill-in-the-blank templates for describing objects or situations. Just as a picture frame gives structure to what's inside, knowledge frames organize information into slots.',
+        simplifiedContent: "Frames are like fill-in-the-blank templates for describing objects or situations. Just as a picture frame gives structure to what's inside, knowledge frames organize information into slots.",
         advancedContent: 'Frames represent stereotypical situations and objects with slot-filler structures. Each frame contains slots for attributes with default values that can be overridden. Frames support inheritance hierarchies and procedural attachments, enabling both declarative and procedural knowledge representation.'
       },
       {
@@ -80,7 +80,7 @@ const units: UnitContent[] = [
       {
         id: 'fuzzy-relations',
         title: 'Fuzzy Relations',
-        simplifiedContent: 'Fuzzy relations describe connections between things that aren't black and white. Like rating how much you like different foods on a scale, rather than just "like" or "don't like."',
+        simplifiedContent: "Fuzzy relations describe connections between things that aren't black and white. Like rating how much you like different foods on a scale, rather than just \"like\" or \"don't like.\"",
         advancedContent: 'Fuzzy relations extend fuzzy sets to describe relationships between elements of two or more sets. They are represented as matrices where each element indicates the strength of the relationship (between 0 and 1). Composition of fuzzy relations enables complex reasoning chains with preserved uncertainty.'
       },
       {
