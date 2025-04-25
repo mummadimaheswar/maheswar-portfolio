@@ -1,4 +1,6 @@
 
+// Import A-Frame first to avoid "AFRAME is not defined" errors
+import 'aframe';
 import { useEffect, useRef, useState } from 'react';
 import { ForceGraph2D } from 'react-force-graph';
 import { motion } from 'framer-motion';
