@@ -1,7 +1,6 @@
-
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Code, Terminal, Figma, GitBranch, Docker } from 'lucide-react';
+import { Code, Terminal, Figma, GitBranch, ArrowRight } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 interface Skill {
@@ -44,7 +43,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Google Colab", level: 95 },
       { name: "VS Code", level: 90 },
       { name: "Git", level: 75, icon: <GitBranch className="w-4 h-4" /> },
-      { name: "Docker", level: 70, icon: <Docker className="w-4 h-4" /> },
+      { name: "Docker", level: 70, icon: <Code className="w-4 h-4" /> },
     ],
   },
   {
