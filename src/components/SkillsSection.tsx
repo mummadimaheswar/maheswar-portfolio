@@ -1,3 +1,4 @@
+
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Code, Terminal, Figma, GitBranch, ArrowRight } from 'lucide-react';
@@ -31,8 +32,8 @@ const skillCategories: SkillCategory[] = [
       <path d="M1.292 5.856L11.54 0v24l-10.25-5.9V5.857zm10.25 0L21.786 0v17.143l-10.244 6.9V5.857z" />
     </svg>,
     skills: [
-      { name: "TensorFlow", level: 85 },
-      { name: "PyTorch", level: 80 },
+      { name: "TensorFlow", level: 20 },
+      { name: "PyTorch", level: 50 },
       { name: "scikit-learn", level: 90 },
     ],
   },

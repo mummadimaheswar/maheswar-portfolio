@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Calendar, Briefcase, Award, Star } from 'lucide-react';
@@ -13,13 +12,6 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
-  {
-    title: "UI/UX Designer at Under 25 App",
-    date: "Jan 2024 - Present",
-    description: "Designed UI/UX for the missions screen, created campaign designs, and developed album covers for the Under 25 App.",
-    icon: <Briefcase size={18} />,
-    tags: ["UI/UX", "Design", "Mobile App"]
-  },
   {
     title: "AI Project: Image Captioning System",
     date: "Dec 2023",
@@ -40,13 +32,6 @@ const achievements: Achievement[] = [
     description: "Created a chatbot that integrates with Google Sheets to provide personalized responses based on user data.",
     icon: <Award size={18} />,
     tags: ["ChatGPT API", "Integration", "JavaScript"]
-  },
-  {
-    title: "Bus-side Ad Design",
-    date: "May 2023",
-    description: "Designed promotional material for student campaigns to be displayed on public transport.",
-    icon: <Star size={18} />,
-    tags: ["Graphic Design", "Marketing"]
   }
 ];
 

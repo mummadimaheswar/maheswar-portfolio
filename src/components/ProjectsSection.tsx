@@ -1,4 +1,3 @@
-
 import { useRef, useState } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { X, ExternalLink, Github, Briefcase } from 'lucide-react';
@@ -43,28 +42,6 @@ const projects = [
     tech: ["JavaScript", "ChatGPT API", "Google Sheets API", "Web Development"],
     category: "AI/ML",
     image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1676621252349/26fc28f4-c06b-4fdc-b4fa-7b91862eff42.png",
-    github: "https://github.com/mummadimaheswar"
-  },
-  {
-    id: 4,
-    title: "Under 25 App UI/UX",
-    date: "Jan 2024",
-    description: "Designed UI/UX for the missions screen, created campaign designs for the Under 25 App.",
-    longDescription: "Worked on improving the user experience for the Under 25 App, focusing on the missions screen interface. Created visual designs for various campaigns, album covers, and promotional materials. Applied user-centered design principles and conducted usability testing to ensure an intuitive and engaging experience.",
-    tech: ["Figma", "UI/UX", "Mobile App Design", "Prototyping"],
-    category: "UI/UX",
-    image: "https://cdn.dribbble.com/users/1615584/screenshots/15571949/media/7e95f0ddcd84771fd418736654438cb3.jpg",
-    github: "https://github.com/mummadimaheswar"
-  },
-  {
-    id: 5,
-    title: "Bus-side Ad Design",
-    date: "May 2023",
-    description: "Designed promotional material for student campaigns to be displayed on public transport.",
-    longDescription: "Created eye-catching visual designs for student campaign advertisements to be displayed on the sides of public transport buses. The designs needed to communicate key messages quickly to passersby, while maintaining brand consistency and visual appeal. Used principles of environmental graphic design to ensure visibility and readability at various distances.",
-    tech: ["Graphic Design", "Advertising", "Adobe Illustrator", "Brand Design"],
-    category: "Design",
-    image: "https://www.falconfastening.com/wp-content/uploads/2023/11/Bus-AdvertisementFP-768x478-1.jpg",
     github: "https://github.com/mummadimaheswar"
   }
 ];
