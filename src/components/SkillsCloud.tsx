@@ -22,12 +22,12 @@ const skills: Skill[] = [
   { name: "TensorFlow", size: 1.1, color: "#0EA5E9" },
   { name: "PyTorch", size: 1, color: "#9b87f5" },
   { name: "Computer Vision", size: 1.1, color: "#0EA5E9" },
-  { name: "Azure", size: 1, color: "#9b87f5" },
-  { name: "Vertex AI", size: 0.9, color: "#0EA5E9" },
-  { name: "Transformers", size: 1.2, color: "#9b87f5" },
-  { name: "BERT", size: 1, color: "#0EA5E9" },
-  { name: "GPT", size: 1.1, color: "#9b87f5" },
-  { name: "LLM", size: 1.3, color: "#0EA5E9" },
+  { name: "UI/UX", size: 1, color: "#9b87f5" },
+  { name: "Figma", size: 0.9, color: "#0EA5E9" },
+  { name: "React", size: 1.2, color: "#9b87f5" },
+  { name: "Git", size: 1, color: "#0EA5E9" },
+  { name: "Docker", size: 1.1, color: "#9b87f5" },
+  { name: "Design", size: 1.3, color: "#0EA5E9" },
   { name: "Data Science", size: 1.2, color: "#9b87f5" },
   { name: "Scikit-learn", size: 0.9, color: "#39FF14" },
   { name: "Neural Networks", size: 1, color: "#9b87f5" },
@@ -172,8 +172,8 @@ const SkillsCloud = () => {
 
   return (
     <section 
-      id="skills" 
-      className="py-10 bg-secondary/30" 
+      id="skill-cloud" 
+      className="py-10" 
       ref={(el) => { ref.current = el; sectionRef.current = el; }}
     >
       <div className="container mx-auto px-6 w-full">
@@ -181,10 +181,10 @@ const SkillsCloud = () => {
           ref={titleRef}
           className="mb-8 text-center"
         >
-          <h2 className="text-3xl font-bold mb-2 text-cyberpunk-purple">Skills</h2>
+          <h2 className="text-3xl font-bold mb-2 text-cyberpunk-purple">My Tech Stack</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6 divider"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            The technical skills that enable me to build innovative AI solutions and intelligent systems.
+            Explore the technologies I work with to build innovative AI solutions and creative designs
           </p>
         </div>
 

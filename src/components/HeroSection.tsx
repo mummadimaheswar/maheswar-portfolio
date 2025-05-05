@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { TypeWriter, FadeUp, ScaleIn } from '@/components/ui/motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, ArrowRight, Download } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -37,7 +38,7 @@ const HeroSection = () => {
           
           <FadeUp delay={2.0}>
             <h2 className="text-xl md:text-3xl text-muted-foreground">
-              <span className="text-primary">AI Developer</span> passionate about intelligent systems
+              <span className="text-primary">AI Enthusiast.</span> Final Year BTech Student. Building ML Solutions with a Creative Touch.
             </h2>
           </FadeUp>
           
@@ -55,6 +56,33 @@ const HeroSection = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Creating intelligent solutions with expertise in machine learning, deep learning, and natural language processing.
             </p>
+            
+            <div className="flex justify-center gap-4 mt-8">
+              <Button 
+                variant="default" 
+                className="gap-2"
+                asChild
+              >
+                <a href="/resume.pdf" download>
+                  <Download size={18} />
+                  Download Resume
+                </a>
+              </Button>
+              
+              <Button
+                variant="outline"
+                className="gap-2"
+                onClick={() => {
+                  const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                View Projects
+                <ArrowRight size={18} />
+              </Button>
+            </div>
           </FadeUp>
         </div>
       </div>
@@ -70,8 +98,14 @@ const HeroSection = () => {
             repeatDelay: 0.5
           }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          onClick={() => {
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+              skillsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
         >
-          <ArrowDown className="text-primary w-8 h-8" />
+          <ArrowDown className="text-primary w-8 h-8 cursor-pointer" />
         </motion.div>
       )}
     </section>

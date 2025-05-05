@@ -3,12 +3,13 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import SkillsSection from '../components/SkillsSection';
+import ProjectsSection from '../components/ProjectsSection';
+import ExperienceSection from '../components/ExperienceSection';
+import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ParticlesBackground from '../components/ParticlesBackground';
 import ScrollToTop from '../components/ScrollToTop';
-import SkillsHub from '../components/education/SkillsHub';
-import KnowledgeUnits from '../components/education/KnowledgeUnits';
-import VisualPlayground from '../components/education/VisualPlayground';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -51,9 +52,10 @@ const Index = () => {
       <ScrollToTop />
       
       <HeroSection />
-      <SkillsHub />
-      <KnowledgeUnits />
-      <VisualPlayground />
+      <SkillsSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <ContactSection />
       <Footer />
     </div>
   );
